@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: mission-control
+
+  datasource:
+    url: jdbc:postgresql://localhost:5435/missiondb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update # (Use `validate` or `none` in prod)
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
+
